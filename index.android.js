@@ -12,6 +12,7 @@ import LotsOfStyles from './app/components/LotsOfStyles';
 import FixedDimensionsBasics from './app/components/FixedDimensionsBasics';
 import FlexDimensionsBasics from './app/components/FlexDimensionsBasics';
 import FlexDirectionBasics from './app/components/FlexDirectionBasics';
+import PizzaTranslator from './app/components/PizzaTranslator';
 import {
   AppRegistry,
   StyleSheet,
@@ -58,4 +59,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => FlexDirectionBasics);
+AppRegistry.registerComponent('AwesomeProject', () => PizzaTranslator);
