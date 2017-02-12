@@ -6,6 +6,8 @@
 
 import React, { Component } from 'react';
 import Bananas from './app/components/Bananas';
+import LotsOfGreetings from './app/components/LotsOfGreetings';
+
 import {
   AppRegistry,
   StyleSheet,
@@ -52,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => Bananas);
+AppRegistry.registerComponent('AwesomeProject', () => LotsOfGreetings);

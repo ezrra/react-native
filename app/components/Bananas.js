@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 
-class Greeting extends Component {
-  render() {
-    
-  }
-}
-
 export default class Bananas extends Component {
   render() {
     let pic = {
