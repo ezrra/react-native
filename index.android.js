@@ -10,6 +10,7 @@ import LotsOfGreetings from './app/components/LotsOfGreetings';
 import BlinkApp from './app/components/BlinkApp';
 import LotsOfStyles from './app/components/LotsOfStyles';
 import FixedDimensionsBasics from './app/components/FixedDimensionsBasics';
+import FlexDimensionsBasics from './app/components/FlexDimensionsBasics';
 import {
   AppRegistry,
   StyleSheet,
@@ -56,4 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => FixedDimensionsBasics);
+AppRegistry.registerComponent('AwesomeProject', () => FlexDimensionsBasics);
