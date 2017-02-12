@@ -11,6 +11,7 @@ import BlinkApp from './app/components/BlinkApp';
 import LotsOfStyles from './app/components/LotsOfStyles';
 import FixedDimensionsBasics from './app/components/FixedDimensionsBasics';
 import FlexDimensionsBasics from './app/components/FlexDimensionsBasics';
+import FlexDirectionBasics from './app/components/FlexDirectionBasics';
 import {
   AppRegistry,
   StyleSheet,
@@ -57,4 +58,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => FlexDimensionsBasics);
+AppRegistry.registerComponent('AwesomeProject', () => FlexDirectionBasics);
