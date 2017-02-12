@@ -15,6 +15,8 @@ import FlexDirectionBasics from './app/components/FlexDirectionBasics';
 import PizzaTranslator from './app/components/PizzaTranslator';
 import IScrolledDownAndWhatHappenedNextShockedMe from './app/components/IScrolledDownAndWhatHappenedNextShockedMe';
 import ListViewBasics from './app/components/ListViewBasics';
+import YoDawgApp from './app/components/Navigator/YoDawgApp';
+import SimpleNavigationApp from './app/components/Navigator/SimpleNavigationApp';
 import {
   AppRegistry,
   StyleSheet,
@@ -61,4 +63,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => ListViewBasics);
+AppRegistry.registerComponent('AwesomeProject', () => SimpleNavigationApp);
