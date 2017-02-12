@@ -7,7 +7,9 @@
 import React, { Component } from 'react';
 import Bananas from './app/components/Bananas';
 import LotsOfGreetings from './app/components/LotsOfGreetings';
-
+import BlinkApp from './app/components/BlinkApp';
+import LotsOfStyles from './app/components/LotsOfStyles';
+import FixedDimensionsBasics from './app/components/FixedDimensionsBasics';
 import {
   AppRegistry,
   StyleSheet,
@@ -54,4 +56,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => LotsOfGreetings);
+AppRegistry.registerComponent('AwesomeProject', () => FixedDimensionsBasics);
