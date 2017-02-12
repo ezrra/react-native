@@ -13,6 +13,8 @@ import FixedDimensionsBasics from './app/components/FixedDimensionsBasics';
 import FlexDimensionsBasics from './app/components/FlexDimensionsBasics';
 import FlexDirectionBasics from './app/components/FlexDirectionBasics';
 import PizzaTranslator from './app/components/PizzaTranslator';
+import IScrolledDownAndWhatHappenedNextShockedMe from './app/components/IScrolledDownAndWhatHappenedNextShockedMe';
+import ListViewBasics from './app/components/ListViewBasics';
 import {
   AppRegistry,
   StyleSheet,
@@ -59,4 +61,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => PizzaTranslator);
+AppRegistry.registerComponent('AwesomeProject', () => ListViewBasics);
