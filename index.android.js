@@ -18,6 +18,7 @@ import ListViewBasics from './app/components/ListViewBasics';
 import YoDawgApp from './app/components/Navigator/YoDawgApp';
 import SimpleNavigationApp from './app/components/Navigator/SimpleNavigationApp';
 import CountriesByPopulation from './app/components/CountriesByPopulation';
+import ListViewDemo from './app/components/ListViewDemo/ListViewDemo';
 import {
   AppRegistry,
   StyleSheet,
@@ -64,4 +65,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => CountriesByPopulation);
+AppRegistry.registerComponent('AwesomeProject', () => ListViewDemo);
