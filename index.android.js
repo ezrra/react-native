@@ -19,6 +19,10 @@ import YoDawgApp from './app/components/Navigator/YoDawgApp';
 import SimpleNavigationApp from './app/components/Navigator/SimpleNavigationApp';
 import CountriesByPopulation from './app/components/CountriesByPopulation';
 import ListViewDemo from './app/components/ListViewDemo/ListViewDemo';
+
+const Login = require('./src/components/login');
+const Dashboard = require('./src/components/dashboard')
+
 import {
   AppRegistry,
   StyleSheet,
@@ -30,17 +34,8 @@ export default class AwesomeProject extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-          index.android.js Edited
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <Login></Login>
+        <Dashboard></Dashboard>
       </View>
     );
   }
@@ -65,4 +60,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => ListViewDemo);
+AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
