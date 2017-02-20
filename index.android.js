@@ -22,42 +22,84 @@ import ListViewDemo from './app/components/ListViewDemo/ListViewDemo';
 
 const Login = require('./src/components/login');
 const Dashboard = require('./src/components/dashboard')
+const Tabs = require('./src/components/tabs')
 
 import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Navigator,
+  TouchableHighlight
 } from 'react-native';
 
+var NavigatorBarRouteMapper = {
+  LeftButton: function(route, navigator, index) {
+    if (index == 0) {
+      return null
+    }
+    return(
+      <TouchableHighlight onPress={() => {
+        if (index > 0) {
+          navigator.pop();
+        }
+      }}>
+        <Text style={{marginTop: 10, marginLeft: 20, color: '#007AFF'}}> Back </Text>
+      </TouchableHighlight>
+    )
+  },
+  RightButton: function (route, navigator, index) {
+    return null;
+  },
+  Title: function (route, navigator, index) {
+    if (route.name == 'Login') {
+      return null
+    }
+    return(
+      <Text style={{marginTop:10, color: '#007AFF'}}>
+        {route.name}
+      </Text>
+    )
+  }
+}
+
 export default class AwesomeProject extends Component {
+
+  renderScene(route, navigator) {
+      switch (route.name) {
+        case 'Login':
+          return (
+            <Login {...route.props} navigator={navigator} route={route} />
+          )
+        case 'Dashboard':
+          return (
+            <Tabs {...route.props} navigator={navigator} route={route} />
+          )
+      }
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Login></Login>
-        <Dashboard></Dashboard>
-      </View>
-    );
+      <Navigator style={{backgroundColor: '#fff'}}
+        initialRoute={{name: 'Login'}}
+        renderScene={this.renderScene}
+        configureScene={(route) => {
+          if (route.sceneConfig) {
+            return route.sceneConfig
+          }
+          return Navigator.SceneConfigs.FloatFromRight
+        }}
+
+        navigationBar={
+          <Navigator.NavigationBar
+            routeMapper={NavigatorBarRouteMapper} />
+        }
+      />
+    )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
 });
 
 AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
